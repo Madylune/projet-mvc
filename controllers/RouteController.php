@@ -1,15 +1,17 @@
 <?php
 namespace Controller;
-use Controller\EmployeeController;
+use Model\TemplateModel as Template;
 
 class RouteController
 {
-    static public function home() {
-        echo '<h1>This is home</h1>';
+    public function home() {
+        $template = new Template;
+        $template->load(__FUNCTION__);
     }
+
     static public function employeesList() {
-        $employees = new EmployeeController;
-        $employees->getAll();
+        $template = new Template;
+        $template->load(__FUNCTION__);
     }
     static public function employee($id) {
         $employee = new employeeController;

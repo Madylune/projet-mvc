@@ -13,7 +13,7 @@ class EmployeeController
     public function getAll() {
         $employeeRepo = $this->em->getRepository(Employee::class);
         $emArray = $employeeRepo->findAll();
-        var_dump($emArray);
+        return $emArray;
     }
 
     public function getOne($id) {
