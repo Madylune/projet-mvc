@@ -10,3 +10,11 @@ employees_placeholder:
     defaults: { controller: 'employee' }
     requirements:
         id: '[0-9]+'
+employees_create:
+    path:     /employees/create
+    defaults: { controller: 'create' }
+employees_delete: 
+    path:     /employeesdelete/{id}
+    defaults: { controller: 'delete' }
+    requirements:
+        id: '[0-9]+'
